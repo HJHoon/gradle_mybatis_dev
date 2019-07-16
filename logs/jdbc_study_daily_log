@@ -1,0 +1,6 @@
+[DEBUG] [2019-07-16 16:31] testOpenSession()
+[DEBUG] [2019-07-16 16:31] session org.apache.ibatis.session.defaults.DefaultSqlSession@2300929b
+[DEBUG] [2019-07-16 16:32] testOpenSession()
+[DEBUG] [2019-07-16 16:32] session org.apache.ibatis.session.defaults.DefaultSqlSession@2300929b
+[DEBUG] [2019-07-16 16:37] testOpenSession()
+[DEBUG] [2019-07-16 16:37] session org.apache.ibatis.session.defaults.DefaultSqlSession@244ada34
