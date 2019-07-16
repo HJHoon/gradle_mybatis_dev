@@ -8,8 +8,12 @@
 	</settings>
 	
 	<typeAliases>
-		
+		<package name="kr.or.yi.gradle_mybatis_dev.dto"/>
 	</typeAliases>
+	
+	<typeHandlers>
+		<package name=""/>
+	</typeHandlers>
 	
 	 <environments default="development">
 		 <environment id="development">
@@ -24,5 +28,6 @@
 	 </environments>
 	 
 	 <mappers>
+	 	<package name="kr.or.yi.gradle_mybatis_dev.dao"/>
 	 </mappers>
 </configuration>
