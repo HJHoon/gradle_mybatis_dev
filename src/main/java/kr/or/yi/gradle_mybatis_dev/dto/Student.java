@@ -9,6 +9,22 @@ public class Student {
 	private PhoneNumber phone;
 	private Date dob;
 
+	
+	public Student(int studId) {
+		this.studId = studId;
+	}
+
+	public Student() {
+	}
+	
+	public Student(int studId, String name, String email, PhoneNumber phone, Date dob) {
+		this.studId = studId;
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.dob = dob;
+	}
+
 	public int getStudId() {
 		return studId;
 	}

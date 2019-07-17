@@ -12,7 +12,7 @@
 	</typeAliases>
 	
 	<typeHandlers>
-		<package name=""/>
+		<package name="kr.or.yi.gradle_mybatis_dev.typehandlers"/>
 	</typeHandlers>
 	
 	 <environments default="development">
