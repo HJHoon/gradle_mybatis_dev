@@ -110,4 +110,16 @@ public class StudentMapperTest extends AbstractTest {
 			log.debug(String.format("key(%s) -> value(%s)", ee.getKey(),ee.getValue()));
 		}
 	}
+	
+	@Test
+	public void test08selectStudentByNoResultMapExtends() {
+		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
+		Student std = new Student();
+		std.setStudId(1);
+		
+		Student searchStudent = stdDao.selectStudentByNoResultMapExtends(std);
+		Assert.assertNotNull(searchStudent);
+		
+		log.debug(searchStudent.getAddress().toString());
+	}
 }

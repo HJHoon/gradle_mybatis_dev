@@ -9,6 +9,7 @@ public interface StudentMapper {
 	Student selectStudentByNo(Student student);
 	Student selectStudentByNoWithResultMap(Student student);
 	List<Student> selectStudentByAll();
+	Student selectStudentByNoResultMapExtends(Student student);
 	
 	List<Map<String,Object>> selectStudentMapByAll();
 	
