@@ -58,4 +58,8 @@
 	<delete id="deleteStudent" parameterType="Student">
 		delete from students where stud_id=#{studId}
 	</delete>
+	
+	<select id="selectStudentMapByAll" resultType="map">
+		<include refid="selectSql"/>
+	</select>
 </mapper>
