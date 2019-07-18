@@ -32,8 +32,7 @@
 		<include refid="whereStmt" />
 	</select>
 
-	<resultMap type="Student" id="stdResult">
-		<id column="stud_id" property="studId" />
+	<resultMap type="Student" id="stdResult" extends="resultStudent">
 		<result column="f" property="phone.countryCode" />
 		<result column="m" property="phone.stateCode" />
 		<result column="l" property="phone.number" />
