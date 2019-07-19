@@ -25,3 +25,7 @@ where t.tutor_id = 1;
 
 alter table students add gender tinyint unsigned; --성별 추가
 desc students;
+
+show tables;
+select * from user_pics;
+desc user_pics;
