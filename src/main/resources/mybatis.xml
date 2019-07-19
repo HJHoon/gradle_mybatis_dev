@@ -12,6 +12,7 @@
 	</typeAliases>
 	
 	<typeHandlers>
+		<typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="Gender"/>
 		<package name="kr.or.yi.gradle_mybatis_dev.typehandlers"/>
 	</typeHandlers>
 	

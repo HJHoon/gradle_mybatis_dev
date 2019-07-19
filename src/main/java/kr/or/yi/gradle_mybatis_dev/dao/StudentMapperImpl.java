@@ -73,5 +73,14 @@ public class StudentMapperImpl implements StudentMapper {
 		}
 	}
 
+	@Override
+	public int insertStudentEnum(Student student) {
+		try(SqlSession sqlSession = MyBatisSqlSessionFactory.openSession()){
+			int res = sqlSession.insert(namespace + ".insertStudentEnum", student);
+			sqlSession.commit();
+			return res;
+		}
+	}
+
 	
 }

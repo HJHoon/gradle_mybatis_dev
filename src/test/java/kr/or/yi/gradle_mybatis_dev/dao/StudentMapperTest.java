@@ -15,6 +15,8 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import kr.or.yi.gradle_mybatis_dev.AbstractTest;
+import kr.or.yi.gradle_mybatis_dev.dto.Address;
+import kr.or.yi.gradle_mybatis_dev.dto.Gender;
 import kr.or.yi.gradle_mybatis_dev.dto.PhoneNumber;
 import kr.or.yi.gradle_mybatis_dev.dto.Student;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -65,7 +67,7 @@ public class StudentMapperTest extends AbstractTest {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
 		Calendar newDate = GregorianCalendar.getInstance();
 		newDate.set(1990,2,28);
-		Student std = new Student(3,"홍길동","lee@test.co.kr",new PhoneNumber("010-1234-1234"), newDate.getTime());
+		Student std = new Student(4,"홍길동","lee@test.co.kr",new PhoneNumber("010-1234-1234"), newDate.getTime());
 		int res = stdDao.insertStudent(std);
 		Assert.assertEquals(1, res);
 	}
@@ -121,5 +123,18 @@ public class StudentMapperTest extends AbstractTest {
 		Assert.assertNotNull(searchStudent);
 		
 		log.debug(searchStudent.getAddress().toString());
+	}
+	
+	@Test
+	public void test09InsertStudentEnum() {
+		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
+		Calendar newDate = GregorianCalendar.getInstance();
+		newDate.set(1990,2,28);
+		Student std = new Student(3,"홍길동","lee@test.co.kr",new PhoneNumber("010-1234-1234"), newDate.getTime(),new Address(),Gender.FEMALE);
+		int res = stdDao.insertStudentEnum(std);
+		Assert.assertEquals(1, res);
+		
+		Student selStd = stdDao.selectStudentByNo(std);
+		log.debug(selStd.toString());
 	}
 }

@@ -14,6 +14,7 @@ public interface StudentMapper {
 	List<Map<String,Object>> selectStudentMapByAll();
 	
 	int insertStudent(Student student);
+	int insertStudentEnum(Student student);
 	int deleteStudent(Student student);
 	int updateStudent(Student student);
 	

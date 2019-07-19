@@ -57,7 +57,9 @@ CREATE TABLE mybatis_dev.COURSE_ENROLLMENT(
   CONSTRAINT FK_ENROLLMENT_COURSE FOREIGN KEY (COURSE_ID) REFERENCES mybatis_dev.COURSES (COURSE_ID)
 );
 
--- °èÁ¤°ú ±ÇÇÑºÎ¿©
+
+
+-- ê³„ì •ì¶”ê°€
 grant all privileges 
 on mybatis_dev.* 
 to 'user_mybatis_dev'@'localhost' 
